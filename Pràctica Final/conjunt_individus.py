@@ -24,8 +24,8 @@ class C_individus:
 
 
     #Metode privat
-    def afegir_individu(self,nom_individu):
-        self.__individus__[nom_individu]=Individu(nom_individu)
+    def afegir_individu(self,nom_individu,cromosomes):
+        self.__individus__[nom_individu]=Individu(nom_individu,cromosomes)
         
         
     
