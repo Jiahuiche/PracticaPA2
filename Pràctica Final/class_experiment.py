@@ -27,7 +27,7 @@ class Experiment:
         self.__conjunt_individus__.crear_arbol(lst)
 
     def __construir_cromosomes(self,str):
-        self._conjunt_individus__.construir_cromosomes(str)
+        self._conjunt_individus__.afegir_genoma(str)
         
         
     
