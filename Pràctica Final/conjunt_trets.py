@@ -2,7 +2,7 @@ from conjunt_individus import C_individus
 
 class C_trets:
     def __init__(self):
-        self.__dic_trets__ = {}
+        self.__dic_trets__ = {tret:(Parella_Cromosomes(), C_individus())}
 
     def _present(tret):
         for t in self.__dic_trets__ :
