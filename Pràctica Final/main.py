@@ -7,8 +7,6 @@ while instruccio != 'fi':
         n = int(item()) #nombre participants de l'experiment
         m = int(item()) #mida cromosomes
         print(instruccio,n,m)
-        familia = C_individus(n) #A C_individus ja es crearà les instàncies d'Individu
-        #parella_cromosomes = Cromosomes(m)
         experiment = Experiment()
         while experiment.mida_arbre() != n:
             nom_individu = item()
@@ -33,12 +31,8 @@ while instruccio != 'fi':
         experiment.consulta_tret(nom_tret)
     elif instruccio == 'consulta_individu':
         nom_individu = item()
-        print(instruccio,nom_individu)
-        familia.consulta_individu(nom_individu)
         experiment.consulta_individu(nom_individu)
     elif instruccio == 'distribucio_tret':
         nom_tret = item()
-        print(instruccio,nom_tret)
-        familia.distribucio_tret(nom_tret)
         experiment.distribucio_tret(nom_tret)
     instruccio = item()
