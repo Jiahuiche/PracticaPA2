@@ -13,8 +13,9 @@ while instruccio != 'fi':
             experiment.afegir_individu(nom_individu)
         while 'arbre no ple':
             familia.llegeix_arbrebinari_int(0)
-        for _ in range(n):
-            experiment.afegir_cromosomes(str)
+        for i in range(n):
+            str = item()
+            experiment.afegir_cromosomes(i,str)
         
     elif instruccio == 'afegir_tret':
         nom_tret = item()
