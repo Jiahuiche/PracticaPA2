@@ -8,21 +8,26 @@ class Experiment:
         
     #Metodes publics
     def afegir_tret(self, nom_tret, nom_individu):
-        #PENDIENTE
+        self._conjunt_trets__.afegir_tret(nom_tret, nom_individu)
 
     def consulta_tret(self, nom_tret):
         self.__conjunt_trets__.consulta_tret(nom_tret)
 
     def consulta_individu(self, nom_individu):
-        #PENDIENTE
-        #self.__conjunt_individus__.consulta_individu(nom_individu)
+        self.__conjunt_individus__.consulta_individu(nom_individu)
 
     def distribucio_tret(self, nom_tret):
-        #PENDIENTE
-        #self.__conjunt_trets__.distribucio_tret(nom_tret)
-
+        self.__conjunt_trets__.distribucio_tret(nom_tret)
+        
     #Metodes privats
-    def afegir_individu(self, nom_individu):
+    def __afegir_individu(self, nom_individu):
         self.__conjunt_individus__.afegir_individu(nom_individu)
+
+    def __crear_arbol(self, lst):
+        self.__conjunt_individus__.crear_arbol(lst)
+
+    def __construir_cromosomes(self,str):
+        self._conjun
+        
         
     
