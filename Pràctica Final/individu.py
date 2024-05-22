@@ -5,7 +5,7 @@ class Individu:
         self.__cromosomes__ = Cromosomes()
         self.__trets__ = set()
     def construir_cromosomes (self, lst):
-        self.__cromosomes__.creacio(lst)
+        self.__cromosomes__.crear(lst)
     def informar(self):
         self.__cromosomes__.informar()
         trets = sorted(self.__trets__)
