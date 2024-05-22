@@ -19,8 +19,8 @@ class C_individus:
         else:
             return self.__arbre_genealogic__()
 
-    def afegir_genoma(self, individu):
-        self.__individus__[individu].construir_cromosomes
+    def afegir_genoma(self, individu, cromosomes):
+        self.__individus__[individu].construir_cromosomes(str)
 
 
     #Metode privat
