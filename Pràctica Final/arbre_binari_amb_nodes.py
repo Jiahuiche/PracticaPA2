@@ -26,10 +26,12 @@ class ArbreBinari:
         assert (v is None and esq is None and dre is None) or v is not None
         if v is None:
             self._root = None   # Arbre buit
+            self._mida = 0
         else:
             l = esq._root if (esq is not None) else None    # <== ATENCIÓ!!!
             r = dre._root if (dre is not None) else None    # <== ATENCIÓ!!!
             self._root = self._Node(v, l, r)
+            self._mida = esq.mida()+dre.mida()+1
             
     # Getters
     def valor_arrel(self):
@@ -211,4 +213,5 @@ class ArbreBinari:
                 r_dre = self.fill_dre().__repr__()
                 return f"ArbreBinari({rt}, esq={r_esq}, dre={r_dre})"
 
-
+def mida ():
+    return self._mida
