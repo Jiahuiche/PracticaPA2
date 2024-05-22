@@ -15,7 +15,7 @@ while instruccio != 'fi':
             familia.llegeix_arbrebinari_int(0)
         for i in range(n):
             str = item()
-            experiment.afegir_cromosomes(i,str)
+            experiment.__assignar_cromosomes(i,str)
         
     elif instruccio == 'afegir_tret':
         nom_tret = item()
