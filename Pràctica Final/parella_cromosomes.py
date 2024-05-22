@@ -5,12 +5,9 @@ class Cromosomes:
         #Getter que retorn cada cromatida com a string
         return self.__cromatide1__
     def crear(self, str):
-        #Assigna cada cromatide amb l'estructura de dades del input
-        l=len(str)
-        self.__cromatide1__ = str[:l]
-        self.__cromatide2__ = str[-l:]
+        #Assigna cada cromatide amb l'estructura de dades del input 
+        self.__cromatide1__ = str
     def informar(self):
         #Imprimeix cada comatide per sdtout
-        a,b = self.get_output()
+        a = self.get_output()
         print(a)
-        print(b)
