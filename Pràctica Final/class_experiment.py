@@ -1,7 +1,6 @@
 from conjunt_individus.py import C_individus
 from conjunt_trets.py import C_trets
 
-#kdkdkkd 
 class Experiment:
     def __init__(self):
         self.__conjunt_individus__ = C_individus()
