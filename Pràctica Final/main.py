@@ -19,7 +19,7 @@ while instruccio != 'fi':
         cromosoma = item()
         while len(cromosoma) = 2*m:
             nom_individu = item()
-            experiment.__afegir_cromosoma(nom_individu,cromosoma)
+            experiment.__assignar_cromosomes(nom_individu,cromosoma)
             comosoma=item()
         
     elif instruccio == 'afegir_tret':
