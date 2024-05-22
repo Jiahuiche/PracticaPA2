@@ -1,11 +1,6 @@
 from pytokr import pytokr
-from parella_comosomes import Cromosomes
-from individu import Individu
-from conjunt_trets import C_trets
-from conjunt_individus import C_individus
 
 item,items = pytokr (iter=True)
-trets = C_trets()
 instruccio = item()
 while instruccio != 'fi':
     if instruccio == 'experiment':
@@ -21,11 +16,7 @@ while instruccio != 'fi':
         while 'arbre no ple':
             familia.llegeix_arbrebinari_int(0)
         for _ in range(n):
-            cromo = int(item())
-            parella_cromosomes.crear()
-            for _ in range(m):
-                parella_cromosomes.afegir_cromo(cromo)
-                cromo = int(item())  #En dos fors porque pytokr solo lee de uno en uno
+            experiment.afegir_cromosomes(str)
         
     elif instruccio == 'afegir_tret':
         nom_tret = item()
