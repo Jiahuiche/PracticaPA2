@@ -8,14 +8,19 @@ while instruccio != 'fi':
         m = int(item()) #mida cromosomes
         print(instruccio,n,m)
         experiment = Experiment()
-        while experiment.mida_arbre() != n:
+        """n_participants=0
+        lst_participants=[]
+        while n_participants < n:
+            participant=int(item())
+            if participant != 0:
+                n_participant+=1
+            lst.append(participant)
+        experiment.__crear_arbol(lst) """
+        cromosoma = item()
+        while len(cromosoma) = 2*m:
             nom_individu = item()
-            experiment.afegir_individu(nom_individu)
-        while 'arbre no ple':
-            familia.llegeix_arbrebinari_int(0)
-        for i in range(n):
-            str = item()
-            experiment.__assignar_cromosomes(i,str)
+            experiment.__afegir_cromosoma(nom_individu,cromosoma)
+            comosoma=item()
         
     elif instruccio == 'afegir_tret':
         nom_tret = item()
