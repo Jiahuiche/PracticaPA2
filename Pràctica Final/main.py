@@ -21,14 +21,11 @@ while instruccio != 'fi':
         nom_tret = item()
         nom_individu = item()
         print(instruccio,nom_tret,nom_individu)
-        trets.afegir_tret(nom_tret, nom_individu)
-        #Afegir tret a Individus también.
         experiment.afegir_tret(nom_tret, nom_individu)
         
     elif instruccio == 'consulta_tret':
         nom_tret = item()
         print(instruccio,nom_tret)
-        C_trets.consulta_tret(nom_tret)
         experiment.consulta_tret(nom_tret)
     elif instruccio == 'consulta_individu':
         nom_individu = item()
