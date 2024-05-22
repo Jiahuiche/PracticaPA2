@@ -14,7 +14,7 @@ class Individu:
     def afegir_tret(self, tret):
         self.__trets__.append(tret)
 
-    def interseccio(self, cromosoma2 = None):
+    def interseccio(self, cromosoma2 = None):  #Cromosoma2 serà donde se guarda las intersecciones anteriores.
         feature_tret = ['-']*len(cromosoma1)
         if cromosoma2 == None:
             feature_tret = cromosoma1
