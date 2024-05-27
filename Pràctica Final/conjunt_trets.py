@@ -2,22 +2,28 @@ from conjunt_individus import C_individus
 
 class C_trets:
     def __init__(self):
-        self.__dic_trets__ = {tret:(Parella_Cromosomes(), C_individus())}
+        self.__dic_trets__ = {}
 
-    def _present(self, tret):
-        for t in self.__dic_trets__ :
+    def _present(self, tret, ID):
+        for t in self.__dic_trets__:
             if t == tret:
-                return True
-        return False
+                for i in self.__dic_trets__[t]:
+                    if self.__dic_trets__[t][1][i] == ID:
+                        return True
+            return Fale
+        
 
     def afegir_tret (self, tret,individu):
-        if self._present(tret):
+        if self._present(tret, individu):
             print('error')
         else:
+            c = 
             self._dic_trets_[tret] = individu.consulta_genoma()
             self._dic_trets_[tret] = (self.interseccio(), self.get_conjunt_individus())
 
-    #def get_conjunt_individus()
+    def conjunt_individus_tret(self, ID):
+        
+        
 
     def consulta_tret(self, tret):
         print(tret)
