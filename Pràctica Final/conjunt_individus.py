@@ -23,7 +23,7 @@ class C_individus:
         self.__individus__[individu].construir_cromosomes(str)
 
     def consultar_genoma(self, ID):
-        return self.__individus__[ID].get_cromosomes(ID)
+        return self.__individus__[ID].get_cromosomes()
 
 
     #Metode privat
