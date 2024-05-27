@@ -2,7 +2,7 @@ from conjunt_individus import C_individus
 
 class C_trets:
     def __init__(self):
-        self.__dic_trets__ = {}
+        self.__dic_trets__ = {tret : (str, [])}
 
     def _present(self, tret, ID):
         for t in self.__dic_trets__:
@@ -19,7 +19,7 @@ class C_trets:
         else:
             c = 
             self._dic_trets_[tret] = individu.consulta_genoma()
-            self._dic_trets_[tret] = (self.interseccio(), self.get_conjunt_individus())
+            self._dic_trets_[tret] = (self.interseccio(), [])
 
     def conjunt_individus_tret(self, ID):
         
