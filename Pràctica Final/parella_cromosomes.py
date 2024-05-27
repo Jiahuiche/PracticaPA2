@@ -1,7 +1,7 @@
 class Cromosomes:
     def __init__(self):
         self.__cromatide1__ = None
-    def get_output(self):
+    def get_cromosoma(self):
         #Getter que retorn cada cromatida com a string
         return self.__cromatide1__
     def crear(self, str):
