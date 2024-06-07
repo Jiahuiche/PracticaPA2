@@ -2,7 +2,8 @@ from conjunt_individus import C_individus
 
 class C_trets:
     def __init__(self):
-        self.__dic_trets__ = {tret : (str, {})}
+        self.__dic_trets__ = {}
+        
 
     def _present(self, tret, individu):
         return individu in self.__dic_trets__[tret][2]
@@ -12,10 +13,11 @@ class C_trets:
         if not self._present(tret, individu):
             print('error')
         else:
+            personas = set()
             self._dic_trets_[tret][1].add(individu)
             interseccio_cromosomes=self._dic_trets_[tret][0]
             self._dic_trets_[tret][0] = self._interseccio()
-            self._dic_trets_[tret] = (self._interseccio(), set.add(individu))
+            self._dic_trets_[tret] = (self._interseccio(), personas.add(individu))
 
     def consulta_tret(self, tret):
         print(tret)
