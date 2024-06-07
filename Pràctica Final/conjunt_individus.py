@@ -28,7 +28,9 @@ class C_individus:
 
     def consultar_genoma(self, ID):
         return self.__individus__[ID].get_cromosomes()
-
+    
+    def afegir_features(tret, nom, c_trets):
+        
 
     #Metode privat
     def afegir_individu(self,nom_individu,cromosomes):
