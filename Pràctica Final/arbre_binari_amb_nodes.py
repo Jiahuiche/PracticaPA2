@@ -217,3 +217,24 @@ class ArbreBinari:
 
     def mida (self):
         return self._mida
+
+    def subarbre(self,set):
+        def _subarbre(t):
+            if t.buit:
+                return t
+            if t.fulla():
+                return ArbreBinari(t._element) if t._element in set else None
+            else:
+                left_tree=_subarbre(t._left)
+                right_tree=_subarbre(t._right)
+                if t._element in set:
+                    return ArbreBinari(t._element,left_tree,right_tree)
+                else:
+                    if left_tree is None and right_tree is None:
+                        return None
+                    else:
+                        return ArbreBinari(-t._element,left_tree, right_tree)
+        return _subarbre(self._root)
+                
+                
+                    
