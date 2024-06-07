@@ -35,6 +35,9 @@ class C_individus:
 
     def subarbre(set_individus):
         inordre=self.__arbre_genealogic__.inordre()
+
+    def crear_subarbre(self,tret,c_trets):
+        set = c_trets.get_set(tret)
         
 
     #Metode privat
