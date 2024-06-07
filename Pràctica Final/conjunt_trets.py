@@ -8,6 +8,10 @@ class C_trets:
     #Metodes pricats
     def _present(self, tret, individu):
         return individu in self.__dic_trets__[tret][1]
+
+    def get_set(tret):
+        return self.__dic_trets__[tret][1]
+    
     def _get_info(self,tret):
         if tret in self.__noms_trets__:
             return self._dic_trets_[tret]
