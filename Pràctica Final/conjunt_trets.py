@@ -11,6 +11,8 @@ class C_trets:
     def _get_info(self,tret):
         if tret in self.__noms_trets__:
             return self._dic_trets_[tret]
+        else:
+            print ('error')
         
     #Metodes publics
     def afegir_tret (self, tret,individu):
