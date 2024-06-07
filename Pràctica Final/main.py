@@ -7,7 +7,7 @@ while instruccio != 'fi':
     if instruccio == 'experiment':
         n = int(item()) #nombre participants de l'experiment
         m = int(item()) #mida cromosomes
-        print(instruccio,n,m)
+        print(instruccio,' ',n,' ',m)
         experiment = Experiment()
         experiment.__crear_arbol()
         cromosoma = item()
