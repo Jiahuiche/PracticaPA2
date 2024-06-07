@@ -5,7 +5,7 @@ from individu import Individu
 class C_individus:
     def __init__(self, nombreindividus):
         self.__arbre_genealogic__ = ArbreBinari()
-        self.__individus__ = [0]*nombreindividus
+        self.__individus__ = [Individu(i) for in in range(nombreindividus)]
     #Metode public
     def consulta_individu(self, nom_individu):
         individu = self.__individus__[nom_individu]
