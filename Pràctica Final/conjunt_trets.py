@@ -17,7 +17,6 @@ class C_trets:
         if self._present(tret, individu):
             print('error')
         else:
-            c = 
             self._dic_trets_[tret] = individu.consulta_genoma()
             self._dic_trets_[tret] = (self.interseccio(), [])
 
