@@ -158,12 +158,12 @@ class ArbreBinari:
         else:
             return _postordre(self._root)
     '''    
-    def inordre(self):
+    def inordre(self,set):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
         del recorregut en inordre
         """
-        def _inordre(t):
+        def _inordre(t,set):
             if t is None:
                 return []
             elif t._element in set:
@@ -174,7 +174,7 @@ class ArbreBinari:
         if self.buit():
             return []
         else:
-            return _inordre(self._root)
+            return _inordre(self._root,set)
     '''
     def nivells(self):
         """
