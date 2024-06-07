@@ -21,8 +21,9 @@ class C_individus:
             return ArbreBinari()
     def assignar_arbre(self, arbre):
         self.__arbre_genealogic__ = arbre
+        
     def consulta_arbre(self):
-        self.__arbre_genealogi__.preorde()
+        self.__arbre_genealogic__.preorde()
         
     def afegir_genoma(self, individu, cromosomes):
         self.__individus__[individu].construir_cromosomes(str)
@@ -38,7 +39,14 @@ class C_individus:
 
     def crear_subarbre(self,tret,c_trets):
         set = c_trets.get_set(tret)
-        
+        def subarbre(t)
+            if t is None or t._element not in set:
+                return ArbreBinari()
+            else:
+                l = subarbre(t._esq)
+                r = subarbre(t._dre)
+                return ArbreBinari(t,l,r)
+        return subarbre(self.__arbre_genealogic__._root)
 
     #Metode privat
     def afegir_individu(self,nom_individu,cromosomes):
