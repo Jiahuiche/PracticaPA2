@@ -39,7 +39,7 @@ class C_individus:
 
     def crear_subarbre(self,tret,c_trets):
         set = c_trets.get_set(tret)
-        def subarbre(t)
+        def subarbre(t):
             if t is None or t._element not in set:
                 return ArbreBinari()
             else:
