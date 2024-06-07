@@ -12,7 +12,7 @@ while instruccio != 'fi':
         experiment.__crear_arbol()
         cromosoma = item()
         while len(cromosoma) == 2*m:
-            nom_individu = item()
+            nom_individu = int(item())
             experiment.__assignar_cromosomes(nom_individu,cromosoma)
             comosoma=item()
         
