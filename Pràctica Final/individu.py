@@ -15,7 +15,7 @@ class Individu:
         for tret in trets:
             print(tret)
     def afegir_tret(self, tret):
-        self.__trets__.append(tret)
+        self.__trets__.add(tret)
 
     def interseccio(self, intersecció_cromosomes = None):  #intersecció_cromosomes serà donde se guarda las intersecciones anteriores.
         cromosomes_propi = self.__cromosomes__.get_cromosomes
