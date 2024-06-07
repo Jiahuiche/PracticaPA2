@@ -28,7 +28,7 @@ class Individu:
         elif intersecció_cromosomes == '-'*len(cromosomes_propi):
             return intersecció_cromosomes
         else:
-            for i in range(len(cromosomes)):
+            for i in range(len(cromosomes_propi)):
                 if cromosoma1[i] == interseció_cromosomes[i]:
                     feature_tret += cromosoma1[i]
                 else:
