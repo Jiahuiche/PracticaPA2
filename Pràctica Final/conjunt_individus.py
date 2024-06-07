@@ -1,4 +1,4 @@
-from ArbreBinari import ArbreBinari
+from arbre_binari_amb_nodes import ArbreBinari
 from individu import Individu
 
 class C_individus:
