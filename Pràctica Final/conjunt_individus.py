@@ -56,7 +56,7 @@ class C_individus:
                     if left_tree is None and right_tree is None:
                         return None
                     else:
-                        return ArbreBinari(t._element, left_tree, right_tree)
+                        return ArbreBinari(-t._element, left_tree, right_tree)
     
         return _subarbre(self._root)
 
