@@ -13,6 +13,7 @@ class C_trets:
             print('error')
         else:
             self._dic_trets_[tret][1].add(individu)
+            interseccio_cromosomes=self._dic_trets_[tret][0]
             self._dic_trets_[tret][0] = self._interseccio()
 
     def consulta_tret(self, tret):
