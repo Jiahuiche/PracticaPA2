@@ -12,7 +12,8 @@ class C_trets:
         if not self._present(tret, individu):
             print('error')
         else:
-            self._dic_trets_[tret] = (self.interseccio(), [])
+            self._dic_trets_[tret][1].add(individu)
+            self._dic_trets_[tret][0] = self._interseccio()
 
     def conjunt_individus_tret(self, ID):
         self._dic_trets[]
