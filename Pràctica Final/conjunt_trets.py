@@ -5,11 +5,14 @@ class C_trets:
         self.__dic_trets__ = {}
         self.__noms_trets__={}
         
-
+    #Metodes pricats
     def _present(self, tret, individu):
         return individu in self.__dic_trets__[tret][1]
+    def _get_info(self,tret):
+        if tret in self.__noms_trets__:
+            return self._dic_trets_[tret]
         
-
+    #Metodes publics
     def afegir_tret (self, tret,individu):
         if tret in self.__noms_trets__ and not self._present(tret,individu):
             self._dic_trets_[tret][1].add(individu)
