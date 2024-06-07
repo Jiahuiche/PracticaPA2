@@ -7,7 +7,10 @@ class Individu:
         self.__trets__ = set()
     #getters
     def get_cromosomes (self):
-        self.__cromosomes__.get_cromosomes()
+        return self.__cromosomes__.get_cromosomes()
+
+    def get_ID(self):
+        return self.__ID__
     #------------------------------
     def informar(self):
         self.__cromosomes__.informar()
