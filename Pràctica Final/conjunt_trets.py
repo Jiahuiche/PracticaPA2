@@ -4,13 +4,8 @@ class C_trets:
     def __init__(self):
         self.__dic_trets__ = {tret : (str, [])}
 
-    def _present(self, tret, ID):
-        for t in self.__dic_trets__:
-            if t == tret:
-                for i in self.__dic_trets__[t]:
-                    if self.__dic_trets__[t][1][i] == ID:
-                        return True
-            return Fale
+    def _present(self, tret, Individu):
+        return Individu in self.__dic_trets__[tret][2]
         
 
     def afegir_tret (self, tret,individu):
@@ -21,9 +16,7 @@ class C_trets:
             self._dic_trets_[tret] = (self.interseccio(), [])
 
     def conjunt_individus_tret(self, ID):
-        
-        
-
+        self._dic_trets[]
     def consulta_tret(self, tret):
         print(tret)
         print(self.__dic_trets__[tret][0])
