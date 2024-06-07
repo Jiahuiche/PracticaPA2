@@ -1,7 +1,7 @@
 from parella_cromosomes import Cromosomes
 
 class Individu:
-    def __init__(self, ID = 0, cromosomes = '0'):
+    def __init__(self, ID, cromosomes):
         self.__ID__ = ID
         self.__cromosomes__ = Cromosomes(cromosomes)
         self.__trets__ = set()
