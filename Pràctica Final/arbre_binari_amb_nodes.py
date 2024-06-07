@@ -213,5 +213,5 @@ class ArbreBinari:
                 r_dre = self.fill_dre().__repr__()
                 return f"ArbreBinari({rt}, esq={r_esq}, dre={r_dre})"
 
-def mida ():
-    return self._mida
+    def mida ():
+        return self._mida
