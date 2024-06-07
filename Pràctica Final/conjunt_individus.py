@@ -45,7 +45,7 @@ class C_individus:
             else:
                 l = subarbre(t._esq)
                 r = subarbre(t._dre)
-                return ArbreBinari(t,l,r)
+                return ArbreBinari(t._element,l,r)
         return subarbre(self.__arbre_genealogic__._root)
 
     #Metode privat
