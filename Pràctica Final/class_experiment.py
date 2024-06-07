@@ -2,8 +2,8 @@ from conjunt_individus import C_individus
 from conjunt_trets import C_trets
 
 class Experiment:
-    def __init__(self):
-        self.__conjunt_individus__ = C_individus()
+    def __init__(self,n):
+        self.__conjunt_individus__ = C_individus(n)
         self.__conjunt_trets__ = C_trets()
         
     #Metodes publics
