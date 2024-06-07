@@ -17,7 +17,7 @@ class Experiment:
         self.__conjunt_individus__.consulta_individu(nom_individu)
 
     def distribucio_tret(self, nom_tret):
-        self.__conjunt_individus__.crear_subarbre(nom_tret, self.__conjunt_trets__)
+        self.__conjunt_individus__.subarbre(nom_tret, self.__conjunt_trets__)
         
     #Metodes privats
     def __afegir_individu(self, nom_individu):
