@@ -34,7 +34,7 @@ class C_individus:
         c_trets.afegir_tret(tret,self.__individus__[nom])
 
     def subarbre(set_individus):
-        arbre = ArbreBinari()
+        inordre=self.__arbre_genealogic__.inordre()
         
 
     #Metode privat
