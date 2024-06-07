@@ -24,7 +24,7 @@ class Experiment:
         self.__conjunt_individus__.afegir_individu(nom_individu)
 
     def __crear_arbol():
-        self.__conjunt_individus__.llegir_arbre(0)
+        self.__conjunt_individus__.llegir_arbre_int(0)
 
     def __assignar_cromosomes(self,i,str):
         self._conjunt_individus__.afegir_genoma(i,str)
