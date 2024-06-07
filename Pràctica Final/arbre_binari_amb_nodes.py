@@ -166,8 +166,10 @@ class ArbreBinari:
         def _inordre(t):
             if t is None:
                 return []
-            else:
+            elif t._element in set:
                 return _inordre(t._left) + [t._element] + _inordre(t._right)
+            else: 
+                return (_inordre(t._left) if t._left._element in set else []) + [-t._element] + (_inordre(t._right) if t._right._element in set else [])
 
         if self.buit():
             return []
