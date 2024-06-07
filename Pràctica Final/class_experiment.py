@@ -8,7 +8,7 @@ class Experiment:
         
     #Metodes publics
     def afegir_tret(self, nom_tret, nom_individu):
-        self._conjunt_trets__.afegir_tret(nom_tret, nom_individu)
+        self._conjunt_individus__.afegir_features(nom_tret, nom_individu, self.__conjunt_trets__)
 
     def consulta_tret(self, nom_tret):
         self.__conjunt_trets__.consulta_tret(nom_tret)
