@@ -1,7 +1,7 @@
 from parella_cromosomes import Cromosomes
 
 class Individu:
-    def __init__(self, ID, cromosomes):
+    def __init__(self, ID,cromosomes):
         self.__ID__ = ID
         self.__cromosomes__ = Cromosomes(cromosomes)
         self.__trets__ = set()
@@ -23,17 +23,17 @@ class Individu:
     def afegir_tret(self, tret):
         self.__trets__.add(tret)
 
-    def interseccio(self, intersecció_cromosomes = None):  #intersecció_cromosomes serà donde se guarda las intersecciones anteriores.
+    def interseccio(self, interseccio_cromosomes = None):  #intersecció_cromosomes serà donde se guarda las intersecciones anteriores.
         cromosomes_propi = self.__cromosomes__.get_cromosomes
         feature_tret = ''
-        if intersecció_cromosomes == None:
+        if interseccio_cromosomes == None:
             return cromosomes_propi
-        elif intersecció_cromosomes == '-'*len(cromosomes_propi):
-            return intersecció_cromosomes
+        elif interseccio_cromosomes == '-'*len(cromosomes_propi):
+            return interseccio_cromosomes
         else:
             for i in range(len(cromosomes_propi)):
-                if cromosoma1[i] == interseció_cromosomes[i]:
-                    feature_tret += cromosoma1[i]
+                if cromosomes_propi[i] == interseccio_cromosomes[i]:
+                    feature_tret += cromosomes_propi[i]
                 else:
                     feature_tret += '-'
             return feature_tret

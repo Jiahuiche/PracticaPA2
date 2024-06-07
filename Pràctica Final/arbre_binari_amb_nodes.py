@@ -158,23 +158,21 @@ class ArbreBinari:
         else:
             return _postordre(self._root)
     '''    
-    def inordre(self,set):
+    def inordre(self):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
         del recorregut en inordre
         """
-        def _inordre(t,set):
+        def _inordre(t):
             if t is None:
                 return []
-            elif t._element in set:
-                return (_inordre(t._left) if t._left._element in set else []) + [t._element] + (_inordre(t._right) if t._right._element in set else [])
             else: 
-                return (_inordre(t._left) if t._left._element in set else []) + [-t._element] + (_inordre(t._right) if t._right._element in set else [])
+                return _inordre(t._left) + [t._element] + _inordre(t._right)
 
         if self.buit():
             return []
         else:
-            return _inordre(self._root,set)
+            return _inordre(self._root)
     '''
     def nivells(self):
         """
@@ -217,24 +215,3 @@ class ArbreBinari:
 
     def mida (self):
         return self._mida
-
-    def subarbre(self,set):
-        def _subarbre(t):
-            if t.buit:
-                return t
-            if t.fulla():
-                return ArbreBinari(t._element) if t._element in set else None
-            else:
-                left_tree=_subarbre(t._left)
-                right_tree=_subarbre(t._right)
-                if t._element in set:
-                    return ArbreBinari(t._element,left_tree,right_tree)
-                else:
-                    if left_tree is None and right_tree is None:
-                        return None
-                    else:
-                        return ArbreBinari(-t._element,left_tree, right_tree)
-        return _subarbre(self._root)
-                
-                
-                    

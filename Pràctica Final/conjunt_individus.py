@@ -1,11 +1,14 @@
 
 from arbre_binari_amb_nodes import ArbreBinari
 from individu import Individu
+from pytokr import pytokr
+
+item = pytokr()
 
 class C_individus:
     def __init__(self, nombreindividus):
         self.__arbre_genealogic__ = ArbreBinari()
-        self.__individus__ = [Individu(i) for in in range(nombreindividus)]
+        self.__individus__ = [0]*(nombreindividus+1)
     #Metode public
     def consulta_individu(self, nom_individu):
         individu = self.__individus__[nom_individu]
@@ -24,10 +27,7 @@ class C_individus:
         
     def consulta_arbre(self):
         self.__arbre_genealogic__.preorde()
-        
-    def afegir_genoma(self, individu, cromosomes):
-        self.__individus__[individu].construir_cromosomes(str)
-
+    
     def consultar_genoma(self, ID):
         return self.__individus__[ID].get_cromosomes()
     
@@ -35,12 +35,16 @@ class C_individus:
         c_trets.afegir_tret(tret,self.__individus__[nom])
 
     def subarbre(self,tret,c_trets):
-        set = c_trets.get_set(tret)
-        subarbre = self.crear_subarbre(set)
-        inordre = subarbre.inordre()
-        print(inordre)
+        if c_trets.tret_in_dic(tret):
+            set = c_trets.get_set(tret)
+            print(set)
+            subarbre = self.crear_subarbre(set)
+            inordre = subarbre.inordre()
+            print(inordre)
+        else:
+            print('error')
 
-    def subarbre(self, conjunto):
+    def crear_subarbre(self, conjunto):
         def _subarbre(t):
             if t is None:
                 return None
@@ -58,11 +62,11 @@ class C_individus:
                     else:
                         return ArbreBinari(-t._element, left_tree, right_tree)
     
-        return _subarbre(self._root)
+        return _subarbre(self.__arbre_genealogic__._root)
 
-    #Metode privat
-    def afegir_individu(self,nom_individu,cromosomes):
+    def afegir_individus(self,nom_individu,cromosomes):
         self.__individus__[nom_individu]=Individu(nom_individu,cromosomes)
+    
         
         
     
