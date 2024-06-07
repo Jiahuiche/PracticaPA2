@@ -18,7 +18,11 @@ class C_individus:
             return ArbreBinari(x,l,r)
         else:
             return ArbreBinari()
-            
+    def assignar_arbre(self, arbre):
+        self.__arbre_genealogic__ = arbre
+    def consulta_arbre(self):
+        self.__arbre_genealogi__.preorde()
+        
     def afegir_genoma(self, individu, cromosomes):
         self.__individus__[individu].construir_cromosomes(str)
 
