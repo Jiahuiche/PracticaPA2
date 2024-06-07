@@ -8,14 +8,7 @@ while instruccio != 'fi':
         m = int(item()) #mida cromosomes
         print(instruccio,n,m)
         experiment = Experiment()
-        """n_participants=0
-        lst_participants=[]
-        while n_participants < n:
-            participant=int(item())
-            if participant != 0:
-                n_participant+=1
-            lst.append(participant)
-        experiment.__crear_arbol(lst) """
+        experiment.crear_arbre()
         cromosoma = item()
         while len(cromosoma) = 2*m:
             nom_individu = item()
