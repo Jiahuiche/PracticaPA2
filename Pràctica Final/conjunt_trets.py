@@ -9,7 +9,7 @@ class C_trets:
         
 
     def afegir_tret (self, tret,individu):
-        if self._present(tret, individu):
+        if not self._present(tret, individu):
             print('error')
         else:
             self._dic_trets_[tret] = individu.consulta_genoma()
