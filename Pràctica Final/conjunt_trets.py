@@ -14,6 +14,7 @@ class C_trets:
         else:
             self._dic_trets_[tret][1].add(individu)
             self._dic_trets_[tret][0] = self._interseccio()
+
     def consulta_tret(self, tret):
         print(tret)
         print(self.__dic_trets__[tret][0])
