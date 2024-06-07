@@ -7,7 +7,7 @@ class C_trets:
         
 
     def _present(self, tret, individu):
-        return individu in self.__dic_trets__[tret][2]
+        return individu in self.__dic_trets__[tret][1]
         
 
     def afegir_tret (self, tret,individu):
