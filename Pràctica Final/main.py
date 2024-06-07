@@ -1,4 +1,5 @@
 from pytokr import pytokr
+from class_experiment import Experiment
 
 item,items = pytokr (iter=True)
 instruccio = item()
