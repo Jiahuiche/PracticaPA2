@@ -4,8 +4,8 @@ class C_trets:
     def __init__(self):
         self.__dic_trets__ = {tret : (str, [])}
 
-    def _present(self, tret, Individu):
-        return Individu in self.__dic_trets__[tret][2]
+    def _present(self, tret, individu):
+        return individu in self.__dic_trets__[tret][2]
         
 
     def afegir_tret (self, tret,individu):
