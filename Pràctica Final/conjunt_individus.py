@@ -30,7 +30,7 @@ class C_individus:
         return self.__individus__[ID].get_cromosomes()
     
     def afegir_features(tret, nom, c_trets):
-        
+        c_trets.afegir_tret(tret,self.__individus__[nom])
 
     #Metode privat
     def afegir_individu(self,nom_individu,cromosomes):
