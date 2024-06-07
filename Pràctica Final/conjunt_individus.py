@@ -31,12 +31,12 @@ class C_individus:
     def consultar_genoma(self, ID):
         return self.__individus__[ID].get_cromosomes()
     
-    def afegir_features(tret, nom, c_trets):
+    def afegir_features(self, tret, nom, c_trets):
         c_trets.afegir_tret(tret,self.__individus__[nom])
 
     def subarbre(self,tret,c_trets):
         set = c_trets.get_set(tret)
-        subarbre = crear_subarbre(set)
+        subarbre = self.crear_subarbre(set)
         inordre = subarbre.inordre()
         print(inordre)
 
