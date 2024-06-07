@@ -17,8 +17,8 @@ class Experiment:
         self.__conjunt_individus__.consulta_individu(nom_individu)
 
     def distribucio_tret(self, nom_tret):
-        self.__conjunt_trets__.distribucio_tret(nom_tret)
-        
+        _,set_individus=self.__conjunt_trets__._get_info(nom_tret)
+        self.__conjunt_individus__.subarbre(ser_individus)
     #Metodes privats
     def __afegir_individu(self, nom_individu):
         self.__conjunt_individus__.afegir_individu(nom_individu)
