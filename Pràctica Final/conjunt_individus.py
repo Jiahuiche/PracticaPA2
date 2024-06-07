@@ -1,3 +1,4 @@
+
 from arbre_binari_amb_nodes import ArbreBinari
 from individu import Individu
 
@@ -31,6 +32,10 @@ class C_individus:
     
     def afegir_features(tret, nom, c_trets):
         c_trets.afegir_tret(tret,self.__individus__[nom])
+
+    def subarbre(set_individus):
+        arbre = ArbreBinari()
+        
 
     #Metode privat
     def afegir_individu(self,nom_individu,cromosomes):
