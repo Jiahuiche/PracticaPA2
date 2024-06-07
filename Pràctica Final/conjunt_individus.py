@@ -15,9 +15,9 @@ class C_individus:
         if x != marca:
             l = self.llegeix_arbrebinari_int(marca)
             r = self.llegeix_arbrebinari_int(marca)
-            self.__arbre_genealogic__ = ArbreBinari(x,l,r)
+            return ArbreBinari(x,l,r)
         else:
-            self.__arbre_genealogic__ = ArbreBinari()
+            return ArbreBinari()
             
     def afegir_genoma(self, individu, cromosomes):
         self.__individus__[individu].construir_cromosomes(str)
