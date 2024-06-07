@@ -1,5 +1,5 @@
-from conjunt_individus.py import C_individus
-from conjunt_trets.py import C_trets
+from conjunt_individus import C_individus
+from conjunt_trets import C_trets
 
 class Experiment:
     def __init__(self):
