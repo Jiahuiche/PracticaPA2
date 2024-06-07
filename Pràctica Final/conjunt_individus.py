@@ -34,11 +34,13 @@ class C_individus:
     def afegir_features(tret, nom, c_trets):
         c_trets.afegir_tret(tret,self.__individus__[nom])
 
-    def subarbre(set_individus):
-        inordre=self.__arbre_genealogic__.inordre()
-
-    def crear_subarbre(self,tret,c_trets):
+    def subarbre(self,tret,c_trets):
         set = c_trets.get_set(tret)
+        subarbre = crear_subarbre(set)
+        inordre = subarbre.inordre()
+        print(inordre)
+
+    def crear_subarbre(self,set):
         def subarbre(t):
             if t is None or t._element not in set:
                 return ArbreBinari()
