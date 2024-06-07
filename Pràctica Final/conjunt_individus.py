@@ -40,15 +40,25 @@ class C_individus:
         inordre = subarbre.inordre()
         print(inordre)
 
-    def crear_subarbre(self,set):
-        def subarbre(t):
-            if t is None or t._element not in set:
-                return ArbreBinari()
+    def subarbre(self, conjunto):
+        def _subarbre(t):
+            if t is None:
+                return None
+    
+            if t.fulla():
+                return ArbreBinari(t._element) if t._element in conjunto else None
             else:
-                l = subarbre(t._esq)
-                r = subarbre(t._dre)
-                return ArbreBinari(t._element,l,r)
-        return subarbre(self.__arbre_genealogic__._root)
+                left_tree = _subarbre(t._left)
+                right_tree = _subarbre(t._right)
+                if t._element in conjunto:
+                    return ArbreBinari(t._element, left_tree, right_tree)
+                else:
+                    if left_tree is None and right_tree is None:
+                        return None
+                    else:
+                        return ArbreBinari(t._element, left_tree, right_tree)
+    
+        return _subarbre(self._root)
 
     #Metode privat
     def afegir_individu(self,nom_individu,cromosomes):
