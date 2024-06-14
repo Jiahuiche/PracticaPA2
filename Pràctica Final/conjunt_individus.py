@@ -50,15 +50,15 @@ class C_individus:
                 return None
     
             if t.fulla():
-                return ArbreBinari(t._element) if t._element in conjunto else None
+                return ArbreBinari(t._element) if t._element in conjunto else ArbreBinari()
             else:
                 left_tree = _subarbre(t._left)
                 right_tree = _subarbre(t._right)
                 if t._element in conjunto:
                     return ArbreBinari(t._element, left_tree, right_tree)
                 else:
-                    if left_tree is None and right_tree is None:
-                        return None
+                    if left_tree.buit() and right_tree.buit():
+                        return ArbreBinari()
                     else:
                         return ArbreBinari(-t._element, left_tree, right_tree)
     
