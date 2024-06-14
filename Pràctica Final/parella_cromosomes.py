@@ -14,7 +14,9 @@ class Cromosomes:
         
     def interseccio(self, nou_cromosomes):  #intersecció_cromosomes serà donde se guarda las intersecciones anteriores.
         interseccio_cromosomes = self.get_cromosomes()
-        if interseccio_cromosomes != '-'*len(nou_cromosomes):
+        if interseccio_cromosomes is None:
+            self.__cromatide1__ = nou_cromosomes
+        elif interseccio_cromosomes != '-'*len(nou_cromosomes):
             feature_tret=''
             for i in range(len(nou_cromosomes)):
                 if nou_cromosomes[i] == interseccio_cromosomes[i]:
