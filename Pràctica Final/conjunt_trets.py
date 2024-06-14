@@ -1,5 +1,5 @@
 from conjunt_individus import C_individus
-
+from parella_cromosomes import Cromosomes
 class C_trets:
     def __init__(self):
         self.__dic_trets__ = {}
@@ -27,10 +27,10 @@ class C_trets:
     def afegir_tret (self, tret,individu):
         if tret in self.__noms_trets__ and not self._present(tret,individu):
             self.__dic_trets__[tret][1].add(individu)
-            interseccio_cromosomes=self.__dic_trets__[tret][0]
-            self.__dic_trets__[tret][0] = self.interseccio(interseccio_cromosomes)
+            nou_cromosomes=individu.get_cromosomes()
+            self.__dic_trets__[tret][0].interseccio(interseccio_cromosomes)
         else:
-            self.__dic_trets__[tret] = (individu.interseccio(),set([individu]))
+            self.__dic_trets__[tret] = (Cromosomes(None),set([individu]))
             self.__noms_trets__.add(tret)
             
 
@@ -43,7 +43,7 @@ class C_trets:
                 print(individu)
         else:
             print('error')
-        
+       
             
         
 
