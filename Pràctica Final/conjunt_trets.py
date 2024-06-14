@@ -37,7 +37,7 @@ class C_trets:
     def consulta_tret(self, tret):
         if self.tret_in_dic(tret):
             print(tret)
-            print(self.__dic_trets__[tret][0])
+            self.__dic_trets__[tret][0].get_cromosomes()
             individus=sorted(self.__dic_trets__[tret][1])
             for individu in individus:
                 print(individu)
