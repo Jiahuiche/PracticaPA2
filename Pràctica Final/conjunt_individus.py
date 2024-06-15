@@ -45,7 +45,6 @@ class C_individus:
     def subarbre(self,tret,c_trets):
         if c_trets.tret_in_dic(tret):
             set = c_trets.get_set(tret)
-            print(set)
             subarbol = self.__arbre_genealogic__.subarbre(set)
             print(subarbol)
         else:
