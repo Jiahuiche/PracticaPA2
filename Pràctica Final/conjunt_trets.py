@@ -12,7 +12,6 @@ class C_trets:
         return individu in self.__dic_trets__[tret][1]
     
     def tret_in_dic(self, tret):
-        print(self.__noms_trets__)
         return tret in self.__noms_trets__
 
     def get_set(self, tret):
