@@ -28,15 +28,18 @@ class C_trets:
         if tret in self.__noms_trets__ and not self._present(tret,individu):
             self.__dic_trets__[tret][1].add(individu)
             nou_cromosomes=individu.get_cromosomes()
-            self.__dic_trets__[tret][0].interseccio(interseccio_cromosomes)
-        else:
+            self.__dic_trets__[tret][0].interseccio(nou_cromosomes)
+        elif tret not in self.__noms_trets__:
             self.__dic_trets__[tret] = (Cromosomes(None),set([individu]))
             self.__noms_trets__.add(tret)
+        else:
+            print('error')
             
 
     def consulta_tret(self, tret):
         if self.tret_in_dic(tret):
-            self.__dic_trets__[tret][0].get_cromosomes()
+            cromosomes_característics = self.__dic_trets__[tret][0].get_cromosomes()
+            print(cromosomes_característics)
             individus=sorted(self.__dic_trets__[tret][1])
             for individu in individus:
                 print(individu)
