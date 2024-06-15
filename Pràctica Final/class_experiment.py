@@ -22,7 +22,8 @@ class Experiment:
         
     #Metodes privats
     def _crear_arbol(self):
-        self.__conjunt_individus__.llegeix_arbrebinari_int(0)
+        self.__conjunt_individus__.assignar_arbre()
+        
 
     def _afegir_individu(self, ID, cromosoma):
         self.__conjunt_individus__.afegir_individus(ID,cromosoma)

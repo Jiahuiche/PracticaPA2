@@ -31,7 +31,7 @@ class ArbreBinari:
             l = esq._root if (esq is not None) else None    # <== ATENCIÓ!!!
             r = dre._root if (dre is not None) else None    # <== ATENCIÓ!!!
             self._root = self._Node(v, l, r)
-            self._mida = esq.mida()+dre.mida()+1
+            self._mida = esq.mida() if esq is not None else 0 + dre.mida() if dre is not None else 0 + 1
             
     # Getters
     def valor_arrel(self):
@@ -215,23 +215,23 @@ class ArbreBinari:
 
     def mida (self):
         return self._mida
-
+    
     def subarbre(self, set):
-        def _subarbre(Node)
+        def _subarbre(Node):
             if Node._left is None and Node._right is None:
-                return Arbrebinari(Node._element,None,None) if Node._element in set else None
+                return ArbreBinari(Node._element,None,None) if Node._element in set else None
             else:
                 l=_subarbre(Node._left)
                 r=_subarbre(Node._right)
                 if Node._element in set:
-                    return ArbreBinari(Node_element,l,r)
+                    return ArbreBinari(Node._element,l,r)
                 else:
                     if l is not None or r is not None:
-                        return Arbrebinari(-Node_element,l,r)
+                        return ArbreBinari(-Node._element,l,r)
                     else:
                         return None
         if self.buit():
-            return self.inordre()
+            return self.inordre() 
         else:
-            subarbre= _subarbre(self.root)
-            return subarbre.inordre()
+            subarbre= _subarbre(self._root)
+            return subarbre.inordre() if subarbre is not None else print('Subarbre buit')

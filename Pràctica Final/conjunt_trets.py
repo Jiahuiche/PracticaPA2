@@ -1,5 +1,6 @@
 from conjunt_individus import C_individus
 from parella_cromosomes import Cromosomes
+
 class C_trets:
     def __init__(self):
         self.__dic_trets__ = {}
@@ -15,7 +16,7 @@ class C_trets:
         return tret in self.__noms_trets__
 
     def get_set(self, tret):
-        return self.__dic_trets__[tret][1]
+        return {individu.get_ID() for individu in self.__dic_trets__[tret][1]} 
     
     def _get_info(self,tret):
         if tret in self.__noms_trets__:
@@ -40,13 +41,13 @@ class C_trets:
         if self.tret_in_dic(tret):
             cromosomes_característics = self.__dic_trets__[tret][0].get_cromosomes()
             print(cromosomes_característics)
-            individus=sorted(self.__dic_trets__[tret][1])
+            set_individu = self.get_set(tret) 
+            individus=sorted(set_individu)
             for individu in individus:
                 print(individu)
         else:
             print('error')
        
-            
         
 
     
