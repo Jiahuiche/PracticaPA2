@@ -9,13 +9,13 @@ class Experiment:
         
     #Metodes publics
     def afegir_tret(self, nom_tret, nom_individu):
-        self.__conjunt_tret__.afegir_features(nom_tret, self.__conjunt_individu__.get_individu(nom_individu))
+        self.__conjunt_tret__.afegir_tret(nom_tret, self.__conjunt_individu__.get_individu(nom_individu))
 
     def consulta_tret(self, nom_tret):
         self.__conjunt_trets__.consulta_tret(nom_tret)
 
     def consulta_individu(self, nom_individu):
-        self.__conjunt_individus__.consulta_individu(nom_individu)
+        self.__conjunt_individus__.get_individu(nom_individu).informar()
 
     def distribucio_tret(self, nom_tret):
         if self.__conjunt_trets__.tret_in_dic(nom_tret):
