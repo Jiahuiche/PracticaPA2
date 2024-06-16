@@ -11,6 +11,8 @@ class C_individus:
         self.__arbre_genealogic__ = ArbreBinari()
 
     #Metode public
+    def get_individu(self,ID):
+        return self.__individus__[ID]
     def consulta_individu(self, nom_individu):
         self.__individus__[nom_individu].informar() #individu és una instància d'Individu,per això pot usar mètodes d'Individu.
     
