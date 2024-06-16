@@ -210,3 +210,4 @@ class ArbreBinari:
                 r_esq = self.fill_esq().__repr__()
                 r_dre = self.fill_dre().__repr__()
                 return f"ArbreBinari({rt}, esq={r_esq}, dre={r_dre})"
+    

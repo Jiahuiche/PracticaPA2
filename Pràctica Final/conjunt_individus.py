@@ -13,8 +13,6 @@ class C_individus:
     #Metode public
     def get_individu(self,ID):
         return self.__individus__[ID]
-    def consulta_individu(self, nom_individu):
-        self.__individus__[nom_individu].informar() #individu és una instància d'Individu,per això pot usar mètodes d'Individu.
     
     def llegeix_arbrebinari_int(self,marca):
         x = int(item()) 
@@ -27,14 +25,10 @@ class C_individus:
             
     def assignar_arbre(self):
         self.__arbre_genealogic__ = self.llegeix_arbrebinari_int(0)
-    
-    def afegir_features(self, tret, nom, c_trets):
-        c_trets.afegir_tret(tret,self.__individus__[nom])
 
     def afegir_individus(self,nom_individu,cromosomes):
         self.__individus__[nom_individu]=Individu(nom_individu,cromosomes)
 
-    
     def subarbre(self, set):
         def _subarbre(arbre):
             if arbre.fulla():
@@ -53,5 +47,5 @@ class C_individus:
             return self.__arbre_genealogic__.inordre() 
         else:
             subarbre= _subarbre(self.__arbre_genealogic__)
-            return subarbre.inordre() if subarbre is not None else None
+            return subarbre.inordre()
     

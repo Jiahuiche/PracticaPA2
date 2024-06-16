@@ -32,6 +32,10 @@ consulta_individu 3
   01010101
   00001111
   qwerty_12
+consulta_individu 3
+  01010101
+  00001111
+  qwerty_12
 consulta_tret qwerty_12
   qwerty_12
   01010101
@@ -108,6 +112,20 @@ consulta_tret qwert1
   1
   2
 afegir_tret qwert1 3
+consulta_tret qwert1
+  qwert1
+  ---
+  ---
+  1
+  2
+  3
+consulta_tret qwert1
+  qwert1
+  ---
+  ---
+  1
+  2
+  3
 consulta_tret qwert1
   qwert1
   ---
