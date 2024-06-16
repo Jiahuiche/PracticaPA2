@@ -210,27 +210,3 @@ class ArbreBinari:
                 r_esq = self.fill_esq().__repr__()
                 r_dre = self.fill_dre().__repr__()
                 return f"ArbreBinari({rt}, esq={r_esq}, dre={r_dre})"
-    
-    def sub_arbre(self, set):
-        def _subarbre(Node):
-            if Node._left is None and Node._right is None:
-                return ArbreBinari(Node._element,None,None) if Node._element in set else None
-            else:
-                l=_subarbre(Node._left)
-                r=_subarbre(Node._right)
-                if Node._element in set:
-                    return ArbreBinari(Node._element,l,r)
-                else:
-                    # Aquest és el cas quan l'element del node no pertany al set, però els elements del
-                    # seu fill encara és possible.
-                    if l is not None or r is not None:
-                        return ArbreBinari(-Node._element,l,r)
-                    # Cap element del set està contingut en el subarbre que té com a arrel el node actual, per tant,
-                    # el podem obviar o eliminar. 
-                    else:
-                        return None
-        if self.buit():
-            return self.inordre() 
-        else:
-            subarbre= _subarbre(self._root)
-            return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
