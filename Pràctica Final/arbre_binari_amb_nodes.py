@@ -215,23 +215,3 @@ class ArbreBinari:
 
     def mida (self):
         return self._mida
-    
-    def subarbre(self, set):
-        def _subarbre(Node):
-            if Node._left is None and Node._right is None:
-                return ArbreBinari(Node._element,None,None) if Node._element in set else None
-            else:
-                l=_subarbre(Node._left)
-                r=_subarbre(Node._right)
-                if Node._element in set:
-                    return ArbreBinari(Node._element,l,r)
-                else:
-                    if l is not None or r is not None:
-                        return ArbreBinari(-Node._element,l,r)
-                    else:
-                        return None
-        if self.buit():
-            return self.inordre() 
-        else:
-            subarbre= _subarbre(self._root)
-            return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
