@@ -18,7 +18,15 @@ class Experiment:
         self.__conjunt_individus__.consulta_individu(nom_individu)
 
     def distribucio_tret(self, nom_tret):
-        self.__conjunt_individus__.subarbre(nom_tret, self.__conjunt_trets__)
+        if c_trets.tret_in_dic(tret):
+            set = c_trets.get_set(tret)
+            subarbol = self.__conjunt_individus__.subarbre(set)
+            print(' ',end='')
+            for i in subarbol:
+                print('',i,end='')
+            print()
+        else:
+            print('  error')
         
     #Metodes privats
     def _crear_arbol(self):
