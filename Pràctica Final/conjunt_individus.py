@@ -60,7 +60,7 @@ class C_individus:
         if self.buit():
             return self.inordre() 
         else:
-            subarbre= _subarbre(self)
+            subarbre= _subarbre(self.__arbre_genealogic__)
             return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
     
         
