@@ -50,6 +50,6 @@ class C_individus:
         if self.__arbre_genealogic__.buit():
             return self.__arbre_genealogic__.inordre() 
         else:
-            subarbre= _subarbre(self.__arbre_genealogic__._root)
+            subarbre= _subarbre(self.__arbre_genealogic__)
             return subarbre.inordre() if subarbre is not None else None
     
