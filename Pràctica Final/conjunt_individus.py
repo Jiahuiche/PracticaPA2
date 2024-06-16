@@ -48,8 +48,8 @@ class C_individus:
                     else:
                         return ArbreBinari()
         if self.__arbre_genealogic__.buit():
-            return self.inordre() 
+            return self.__arbre_genealogic__.inordre() 
         else:
             subarbre= _subarbre(self.__arbre_genealogic__)
-            return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
+            return subarbre.inordre() if subarbre is not None else None
     
