@@ -26,13 +26,11 @@ class ArbreBinari:
         assert (v is None and esq is None and dre is None) or v is not None
         if v is None:
             self._root = None   # Arbre buit
-            self._mida = 0
         else:
             l = esq._root if (esq is not None) else None    # <== ATENCIÓ!!!
             r = dre._root if (dre is not None) else None    # <== ATENCIÓ!!!
             self._root = self._Node(v, l, r)
-            self._mida = esq.mida()+dre.mida()+1
-            
+
     # Getters
     def valor_arrel(self):
         """
@@ -158,23 +156,21 @@ class ArbreBinari:
         else:
             return _postordre(self._root)
     '''    
-    def inordre(self,set):
+    def inordre(self):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
         del recorregut en inordre
         """
-        def _inordre(t,set):
+        def _inordre(t):
             if t is None:
                 return []
-            elif t._element in set:
-                return (_inordre(t._left) if t._left._element in set else []) + [t._element] + (_inordre(t._right) if t._right._element in set else [])
             else: 
-                return (_inordre(t._left) if t._left._element in set else []) + [-t._element] + (_inordre(t._right) if t._right._element in set else [])
+                return _inordre(t._left) + [t._element] + _inordre(t._right)
 
         if self.buit():
             return []
         else:
-            return _inordre(self._root,set)
+            return _inordre(self._root)
     '''
     def nivells(self):
         """
@@ -214,27 +210,27 @@ class ArbreBinari:
                 r_esq = self.fill_esq().__repr__()
                 r_dre = self.fill_dre().__repr__()
                 return f"ArbreBinari({rt}, esq={r_esq}, dre={r_dre})"
-
-    def mida (self):
-        return self._mida
-
-    def subarbre(self,set):
-        def _subarbre(t):
-            if t.buit:
-                return t
-            if t.fulla():
-                return ArbreBinari(t._element) if t._element in set else None
+    
+    def sub_arbre(self, set):
+        def _subarbre(Node):
+            if Node._left is None and Node._right is None:
+                return ArbreBinari(Node._element,None,None) if Node._element in set else None
             else:
-                left_tree=_subarbre(t._left)
-                right_tree=_subarbre(t._right)
-                if t._element in set:
-                    return ArbreBinari(t._element,left_tree,right_tree)
+                l=_subarbre(Node._left)
+                r=_subarbre(Node._right)
+                if Node._element in set:
+                    return ArbreBinari(Node._element,l,r)
                 else:
-                    if left_tree is None and right_tree is None:
-                        return None
+                    # Aquest és el cas quan l'element del node no pertany al set, però els elements del
+                    # seu fill encara és possible.
+                    if l is not None or r is not None:
+                        return ArbreBinari(-Node._element,l,r)
+                    # Cap element del set està contingut en el subarbre que té com a arrel el node actual, per tant,
+                    # el podem obviar o eliminar. 
                     else:
-                        return ArbreBinari(-t._element,left_tree, right_tree)
-        return _subarbre(self._root)
-                
-                
-                    
+                        return None
+        if self.buit():
+            return self.inordre() 
+        else:
+            subarbre= _subarbre(self._root)
+            return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
