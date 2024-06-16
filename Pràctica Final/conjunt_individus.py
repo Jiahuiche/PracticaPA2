@@ -29,17 +29,6 @@ class C_individus:
     def afegir_features(self, tret, nom, c_trets):
         c_trets.afegir_tret(tret,self.__individus__[nom])
 
-    def subarbre(self,tret,c_trets):
-        if c_trets.tret_in_dic(tret):
-            set = c_trets.get_set(tret)
-            subarbol = self.__arbre_genealogic__.sub_arbre(set)
-            print(' ',end='')
-            for i in subarbol:
-                print('',i,end='')
-            print()
-        else:
-            print('  error')
-
     def afegir_individus(self,nom_individu,cromosomes):
         self.__individus__[nom_individu]=Individu(nom_individu,cromosomes)
 
