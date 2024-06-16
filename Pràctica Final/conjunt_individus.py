@@ -32,13 +32,14 @@ class C_individus:
     def afegir_individus(self,nom_individu,cromosomes):
         self.__individus__[nom_individu]=Individu(nom_individu,cromosomes)
 
+    
     def subarbre(self, set):
         def _subarbre(arbre):
             if arbre.fulla():
-                return ArbreBinari(Node._element) if arbre.valor_arrel() in set else ArbreBinari()
+                return ArbreBinari(arbre.valor_arrel()) if arbre.valor_arrel() in set else ArbreBinari()
             else:
                 l=_subarbre(arbre.fill_esq())
-                r=_subarbre(Node.fill_dre())
+                r=_subarbre(arbre.fill_dre())
                 if arbre.valor_arrel() in set:
                     return ArbreBinari(arbre.valor_arrel(),l,r)
                 else:
@@ -46,13 +47,9 @@ class C_individus:
                         return ArbreBinari(-arbre.valor_arrel(),l,r)
                     else:
                         return ArbreBinari()
-        if self.buit():
+        if self.__arbre_genealogic__.buit():
             return self.inordre() 
         else:
             subarbre= _subarbre(self.__arbre_genealogic__)
             return subarbre.inordre() if subarbre is not None else print('Subarbre buit')
-    
-        
-        
-    
     

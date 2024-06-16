@@ -17,13 +17,13 @@ class C_trets:
         
     #Metodes publics
     def afegir_tret (self, tret,individu):
-        nou_cromosomes=individu.get_cromosomes()
+        nou_cromosomes1, nou_cromosomes2=individu.get_cromosomes()
         individu.afegir_tret(tret)
         if tret in self.__noms_trets__ and not self._present(tret,individu):
             self.__dic_trets__[tret][1].add(individu)
-            self.__dic_trets__[tret][0].interseccio(nou_cromosomes)
+            self.__dic_trets__[tret][0].interseccio(nou_cromosomes1, nou_cromosomes2)
         elif tret not in self.__noms_trets__:
-            self.__dic_trets__[tret] = (Cromosomes(nou_cromosomes),set([individu]))
+            self.__dic_trets__[tret] = (Cromosomes(nou_cromosomes1+nou_cromosomes2),set([individu]))
             self.__noms_trets__.add(tret)
         else:
             print('  error')

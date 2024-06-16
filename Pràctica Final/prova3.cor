@@ -55,7 +55,7 @@ distribucio_tret asdf_34
 consulta_tret asdf_34
   asdf_34
   1--01--0
-  10101010
+  1--01--0
   4
   5
 afegir_tret asdf_34 2
@@ -63,8 +63,8 @@ distribucio_tret asdf_34
   4 -1 2 -3 5
 consulta_tret asdf_34
   asdf_34
-  ---0---0
-  1-1-1-1-
+  --------
+  --------
   2
   4
   5
@@ -107,28 +107,28 @@ consulta_tret qwert1
 afegir_tret qwert1 2
 consulta_tret qwert1
   qwert1
-  111
+  1-1
   0-0
   1
   2
 afegir_tret qwert1 3
 consulta_tret qwert1
   qwert1
-  111
+  ---
   ---
   1
   2
   3
 consulta_tret qwert1
   qwert1
-  111
+  ---
   ---
   1
   2
   3
 consulta_tret qwert1
   qwert1
-  111
+  ---
   ---
   1
   2

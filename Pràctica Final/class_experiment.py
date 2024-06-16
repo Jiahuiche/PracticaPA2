@@ -18,8 +18,8 @@ class Experiment:
         self.__conjunt_individus__.consulta_individu(nom_individu)
 
     def distribucio_tret(self, nom_tret):
-        if c_trets.tret_in_dic(tret):
-            set = c_trets.get_set(tret)
+        if self.__conjunt_trets__.tret_in_dic(nom_tret):
+            set = self.__conjunt_trets__.get_set(nom_tret)
             subarbol = self.__conjunt_individus__.subarbre(set)
             print(' ',end='')
             for i in subarbol:
