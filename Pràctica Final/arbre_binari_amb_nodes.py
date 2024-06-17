@@ -139,7 +139,7 @@ class ArbreBinari:
             return []
         else:
             return _preordre(self._root)        
-    '''
+    
     def postordre(self):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
@@ -155,7 +155,7 @@ class ArbreBinari:
             return []
         else:
             return _postordre(self._root)
-    '''    
+        
     def inordre(self):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
@@ -171,7 +171,7 @@ class ArbreBinari:
             return []
         else:
             return _inordre(self._root)
-    '''
+        
     def nivells(self):
         """
         retorna una llista amb els elements de self, ordenats d'acord a la definició 
@@ -191,7 +191,7 @@ class ArbreBinari:
                 if tt._right is not None:
                     q.encuar(tt._right)
             return resultat
-    '''
+        
     def __repr__(self):
         if self.buit():
             return 'ArbreBinari()'
